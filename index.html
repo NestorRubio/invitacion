@@ -3,36 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PNG Viewer</title>
+  <title>Responsive PNG Invitation with Hyperlinks</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background-color: #EDC9AF;
-      font-family: sans-serif;
+      background: #EDC9AF;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     .image-container {
-      max-width: 800px;
+      position: relative;
       width: 100%;
-      padding: 20px;
+      max-width: 800px;
+      margin: 20px 0;
     }
+
     .image-container img {
       width: 100%;
       height: auto;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      background: white;
+      display: block;
+    }
+
+    .hotspot {
+      position: absolute;
+      cursor: pointer;
+      display: block;
+    }
+
+    /* Adjust these based on actual positions of text blocks in % */
+    .link1 {
+      top: 20%;
+      left: 12%;
+      width: 25%;
+      height: 7%;
+    }
+
+    .link2 {
+      top: 40%;
+      left: 12%;
+      width: 25%;
+      height: 7%;
+    }
+
+    .link3 {
+      top: 60%;
+      left: 12%;
+      width: 25%;
+      height: 7%;
     }
   </style>
 </head>
 <body>
 
   <div class="image-container">
-    <img src="./sources/3.png" alt="Page 1">
-    <img src="./sources/4.png" alt="Page 2">
+    <img src="./sources/3.png" alt="invitacion">
+  </div>
+
+  <div class="image-container">
+    <img src="./sources/4.png" alt="detalles">
+
+    <!-- Clickable areas over the image -->
+    <a href="https://forms.gle/PKLnwM9A78Rc8xZx6" class="hotspot link1" title="confirmacion_asistencia"></a>
+    <a href="https://maps.app.goo.gl/VxQ4dQ9ZBDxJwbnP7" class="hotspot link2" title="ubicacion_evento"></a>
+    <a href="https://pin.it/5V0yYnFja" class="hotspot link3" title="dresscode"></a>
   </div>
 
 </body>
